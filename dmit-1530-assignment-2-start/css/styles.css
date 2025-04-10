@@ -1,0 +1,35 @@
+:root {
+    --box-shadow: 0 2px 8px 4px rgba(0,0,0,0.15);
+    --off-black: #111111;
+    --red: #9F001A;
+}
+
+/* Utility Classes */
+
+.btn {
+    background-color: var(--off-black);
+    color: #fff;
+    transition: background-color 0.4s ease;
+}
+
+.btn:hover {
+    background-color: var(--red);
+    color: #fff;
+}
+
+/* Typography */
+
+a {
+    text-decoration: none;
+}
+
+a:hover:not([class]) {
+    text-decoration: underline;
+}
+
+/* Universal Styles */
+
+body {
+    color: var(--off-black);
+    line-height: 1.5;
+}
