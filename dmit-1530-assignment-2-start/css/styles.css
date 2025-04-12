@@ -1,5 +1,5 @@
 :root {
-    --box-shadow: 0 2px 8px 4px rgba(0,0,0,0.15);
+    --box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.15);
     --off-black: #111111;
     --red: #9F001A;
 }
@@ -10,6 +10,12 @@
     background-color: var(--off-black);
     color: #fff;
     transition: background-color 0.4s ease;
+    padding: 5% 20%;
+    font-family: "Chronicle Display", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    border-color: var(--off-black);
 }
 
 .btn:hover {
@@ -21,15 +27,757 @@
 
 a {
     text-decoration: none;
+    font-family: "Libre Franklin", sans-serif;
+
 }
 
 a:hover:not([class]) {
     text-decoration: underline;
+    max-width: fit-content;
 }
 
 /* Universal Styles */
 
 body {
+    max-width: 1200px;
+    margin: 0 auto;
     color: var(--off-black);
     line-height: 1.5;
+}
+
+
+/*HEADER*/
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--off-black);
+    padding: 1rem;
+}
+
+h1 {
+    font-family: "Chronicle Display", sans-serif;
+    font-size: 1.5rem;
+}
+
+.toggle-btn svg {
+    width: 2rem;
+}
+
+.toggle-btn:hover {
+    cursor: pointer;
+}
+
+.shop-btn svg {
+    width: 1rem;
+    justify-content: baseline;
+    visibility: hidden;
+}
+
+.other-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-icons svg {
+    width: 1.5rem;
+
+}
+
+.search-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #111111;
+    padding-right: .5rem;
+}
+
+.search-icon:hover {
+    color: var(--red);
+}
+
+.account-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #111111;
+    padding-right: .5rem;
+}
+
+.account-icon:hover {
+    color: var(--red);
+}
+
+.cart-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #111111;
+}
+
+.cart-icon:hover {
+    color: var(--red);
+}
+
+.menu-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.menu div:nth-child(3) {
+    border-bottom: 2px solid var(--off-black);
+    padding-bottom: 2rem;
+}
+
+.menu a {
+    color: #111111;
+    margin-left: 1rem;
+}
+
+.menu {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    /*Hide until the toggle button is clicked (see js)*/
+    visibility: hidden;
+    /*Close the gap that it leaves once hidden*/
+    position: absolute;
+}
+
+/*The class below is to make the .menu visible when the toggle button is clicked on*/
+.expanded {
+    visibility: unset;
+    position: unset;
+}
+
+.collapsed {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+/*SECTION HERO BANNER*/
+.hero-banner {
+    position: relative;
+}
+
+.hero-banner h2 {
+    position: absolute;
+    left: 1rem;
+    font-family: "Chronicle Display", sans-serif;
+    font-size: 2.25rem;
+    color: white;
+    bottom: .5rem;
+}
+
+/*SECTION MODERN TWEED*/
+.modern-tweed {
+    background-color: var(--red);
+    padding: 0 1rem 5rem 1rem;
+    padding-bottom: 10rem;
+    position: relative;
+}
+
+.modern-tweed h2 {
+    font-family: "Chronicle Display", sans-serif;
+    font-size: 2.25rem;
+}
+
+.modern-tweed p {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.modern-tweed button {
+    position: absolute;
+    right: 1.5rem;
+    font-family: "Chronicle Display", sans-serif;
+
+
+}
+
+/*SECTION CUSTOM WEAVES*/
+
+
+.overlap {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 140vh;
+}
+
+.absolute {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+}
+
+.absolute:first-child {
+    top: 10rem;
+    left: 1rem;
+}
+
+.absolute:last-child {
+    right: 1rem;
+    bottom: 8rem;
+
+}
+
+.custom-weaves h2 {
+    font-family: "Chronicle Display", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.custom-weaves p {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    color: #212121;
+
+}
+
+.custom-weaves .btn {
+    margin: 2rem 4rem 8rem 1rem;
+}
+
+
+/*SECTION TARTAN FINDER*/
+.tartan-finder {
+    background-color: #111111;
+    color: #fff;
+}
+
+.tartan-finder button {
+    background-color: white;
+    color: #111111;
+}
+
+.tartan-finder h2 {
+    font-family: "Chronicle Display", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-top: 6rem;
+}
+
+.tartan-finder p {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+    padding: 2rem 1rem;
+}
+
+.tartan-finder button {
+    margin-left: 1rem;
+    margin-bottom: 5rem;
+}
+
+/*RENTAL PACKAGES*/
+.rental-packages {
+    padding: 5rem 1rem;
+}
+
+.rental-packages h2 {
+    font-family: "Chronicle Display", sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.rental-packages p {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+    margin-top: 2rem;
+
+}
+
+/*CELEBRATE IN STYLE*/
+h3 {
+    font-family: "Chronicle Display", sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--off-black);
+    color: #fff;
+    padding: 1.5rem 0;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+
+}
+
+h4 {
+    font-family: "Chronicle Display", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tier-container button {
+    margin: 2rem auto 2rem auto;
+    padding: 5% 25%;
+}
+
+.standard {
+    border: 1px solid #CACACA;
+    border-radius: .3rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+
+}
+
+.standard button {
+    margin-bottom: 3rem;
+}
+
+.standard li {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.premium {
+    position: relative;
+    border: 1px solid #CACACA;
+    border-radius: .3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+h5 {
+    position: absolute;
+    right: -.5rem;
+    top: -2.5rem;
+    background-color: #9F001A;
+    color: #fff;
+    padding: .5rem 1.5rem;
+    border-radius: 1.2rem;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+}
+
+.premium li {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.premium p {
+    padding: 1rem;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+}
+
+.premium hr {
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.premium-list {
+    text-align: left;
+    padding: 1rem;
+    margin-top: 0rem;
+}
+
+.premium-list li {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+    color: #414141;
+
+}
+
+.heritage {
+    border: 1px solid #CACACA;
+    border-radius: .3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.heritage li {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+    line-height: 2;
+
+}
+
+.heritage p {
+    padding: 1rem;
+}
+
+.heritage hr {
+    width: 100%;
+    padding: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.heritage-list {
+    text-align: left;
+    padding-left: 1rem;
+    color: #414141;
+}
+
+.heritage button {
+    margin-bottom: 3rem;
+}
+
+
+
+/*FOOTER*/
+footer {
+    background-color: #111111;
+    color: #fff;
+}
+
+footer a {
+    font-family: "Libre Franklin", sans-serif;
+    color: #fff;
+}
+
+footer h4 {
+    font-family: "Chronicle Display", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.disclaimer p {
+    font-family: "Libre Franklin", sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: #D8D8D8;
+    text-align: center;
+    padding: 2rem 2rem .2rem 2rem;
+}
+
+hr {
+    color: white;
+    width: 95%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+.footer-nav span {
+    font-family: "Libre Franklin", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.get-in-touch {
+    font-family: "Libre Franklin", sans-serif;
+    padding-bottom: 1.5rem;
+    line-height: 2rem;
+    padding-left: 1rem;
+}
+
+.get-in-touch span {
+    font-family: "Libre Franklin", sans-serif;
+    text-transform: uppercase;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.5rem;
+}
+
+.footer-nav div {
+    display: flex;
+    flex-direction: column;
+    font-family: "Libre Franklin", sans-serif;
+    padding-bottom: 3.5rem;
+    line-height: 2rem;
+
+}
+
+
+
+/*Medium screen min width 720px*/
+@media screen and (min-width: 720px) {
+
+    .btn {
+        padding: 2% 6%;
+
+    }
+
+    .hero-banner h2 {
+        font-size: 4rem;
+        padding-left: 2.5rem;
+    }
+
+    .modern-tweed h2 {
+        font-size: 4rem;
+        padding-left: 2.5rem;
+    }
+
+    .modern-tweed p {
+        padding-left: 2.5rem;
+        width: 73%;
+    }
+
+    .modern-tweed button {
+        left: 35%;
+        right: 35%;
+    }
+
+    .custom-weaves {
+        padding-left: 7rem;
+        padding-right: 7rem;
+        margin-top: 0;
+    }
+
+    .custom-weaves img {
+        height: 80%;
+    }
+
+    .absolute:first-child {
+        top: 6rem;
+        left: 1rem;
+    }
+
+    .absolute:last-child {
+        right: 1rem;
+        bottom: -10rem;
+    }
+
+    .overlap {
+        height: 70vh;
+    }
+
+    .custom-weaves h2 {
+        font-size: 3rem;
+        margin-top: 12rem;
+    }
+
+    .custom-weaves button {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .tartan-finder {
+        position: relative;
+        height: 70vh;
+    }
+
+    .tartan-finder img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .tartan-absolute {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        height: 100%;
+        width: 60%;
+        background-color: #111111;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+    }
+
+    .tartan-finder button {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .rental-packages {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+
+    .rental-packages button {
+        padding: 1rem 3rem;
+    }
+
+    .rental-packages p {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .tier-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .premium p {
+        padding: 0 2rem 1rem 2rem;
+    }
+
+    .premium-list {
+        padding-left: 2rem;
+    }
+
+    .heritage p {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .heritage-list {
+        padding-left: 2rem;
+    }
+
+    footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .disclaimer p {
+        padding: 0 8rem;
+    }
+
+    .footer-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+    }
+
+    .footer-nav div {
+        align-items: left;
+        justify-content: space-between;
+        margin-right: 23%;
+    }
+
+    .footer-nav div:nth-child(2) {
+        margin-left: 2rem;
+    }
+
+}
+
+
+@media screen and (min-width:960px) {
+    .collapsed {
+        /*Hiding the collapsable part of the menu*/
+        visibility: hidden;
+        /*hiding the gap that it creates when hidden*/
+        position: absolute;
+    }
+
+    .shop-btn svg {
+        visibility: unset;
+    }
+
+    .toggle-btn {
+        display: none;
+    }
+
+    .menu {
+        position: unset;
+        visibility: visible;
+    }
+
+    .header-title {
+        display: contents;
+    }
+
+    h1 {
+        width: 10rem;
+        margin-left: 2rem;
+        font-size: 1.25rem;
+    }
+
+    .menu div:nth-child(3) {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .other-nav {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0;
+        font-size: .8rem;
+    }
+
+    .other-nav a {
+        padding: 0;
+    }
+
+    .other-nav a:first-child {
+        margin-left: 0;
+
+    }
+
+    .menu {
+        display: contents;
+        margin: 0;
+    }
+
+    .menu-icons {
+        width: 15rem;
+        padding: 0;
+        margin-right: 2rem;
+        margin-left: 3rem;
+        font-size: .8rem;
+
+    }
+
+    .shop-btn {
+        width: 5rem;
+        font-size: .8rem;
+    }
+
+    .expanded {
+        visibility: unset;
+        position: unset;
+    }
+
+    .collapsed {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+    }
+
+
+    .flex-header {
+        display: flex;
+        flex-direction: row;
+        height: 4rem;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+
+    .tier-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    .standard {
+        width: 32%;
+        height: 60%;
+    }
+
+    .premium {
+        width: 32%;
+    }
+
+    .heritage {
+        width: 32%;
+    }
+
+    .footer-nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-nav div {
+        margin: 0;
+    }
+
+
+
+
+
 }
