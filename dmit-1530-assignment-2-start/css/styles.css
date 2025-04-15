@@ -70,7 +70,7 @@ h1 {
 
 .shop-btn svg {
     width: 1rem;
-    justify-content: baseline;
+    justify-content: flex-start;
     visibility: hidden;
 }
 
@@ -643,7 +643,7 @@ hr {
     }
 
     .footer-nav div {
-        align-items: left;
+        align-items: flex-start;
         justify-content: space-between;
         margin-right: 23%;
     }
